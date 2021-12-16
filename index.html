@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <script type="application/javascript">
+            function getIP(json) {
+              document.write(json.ip);
+            }
+    </script>
+
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
 </head>
 <body>
 
     <div class="container">
-        <p>
-            <script type="application/javascript">
-                function getIP(json) {
-                  document.write("My public IP address is: ", json.ip);
-                }
-              </script>
-        </p>
+        <p><script>getIP</script></p>
         <p>
             <span class="prompt">
                 workhorse

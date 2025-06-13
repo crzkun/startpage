@@ -1,159 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start</title>
-    <link rel="stylesheet" href="css/style.css">
-    
-
-
+  <meta charset="utf-8" />
+  <meta name="author" content="Volodymyr Pivoshenko (https://github.com/pivoshenko)" />
+  <!-- CSS files will be loaded by JavaScript based on configuration -->
+  <link href="https://cdn.jsdelivr.net/gh/monzanifabio/cryptofont/cryptofont.css" rel="stylesheet" />
+  <link href="src/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="src/css/tabler-icons.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="src/img/favicon.png" />
+  <title>~/.config</title>
 </head>
+
 <body>
+  <tabs-list></tabs-list>
 
-    <div class="container">
-        <p>
-            <span class="prompt">
-                workhorse
-            </span>
-            ~/htdocs/startpage $ cat
-            <span class="prompt-text">
-                script.js
-            </span>
-        </p>
+  <script type="text/javascript" src="src/common/palette.js"></script>
+  <script type="text/javascript" src="src/common/utils.js"></script>
+  <script type="text/javascript" src="src/common/storage.js"></script>
+  <script type="text/javascript" src="src/common/actions.js"></script>
+  <script type="text/javascript" src="src/common/config.js"></script>
+  <script type="text/javascript" src="src/common/strftime.js"></script>
+  <script type="text/javascript" src="src/common/theme.js"></script>
+  <script type="text/javascript" src="src/common/component.js"></script>
 
-        <p>
-            <span class="syn">
-                var
-            </span>
-            <span class="name">
-                app
-            </span>
-            <span class="syn">
-                = new
-            </span>
-            <span class="name">
-                Vue({
-            </span>
+  <script type="text/javascript" src="./userconfig.js"></script>
 
-            <ul>
-                <li>
-                    <span class="name">el:</span>
-                    <span class="value">'#start'</span>
-                    <span class="name">,</span>
-                </li>
-                <li>
-                    <span class="name">data: {</span>
-                        <ul>
-                            <li>
-                                <a href="https://facebook.com" rel="noreferrer">
-                                    <span class="name">facebook:</span>
-                                    <span class="value">'facebook.com'</span>
-                                    <span class="name">,</span>
-                                </a>
-                            </li>
-							<li>
-                                <a href="https://youtube.com" rel="noreferrer">
-                                    <span class="name">youtube:</span>
-                                    <span class="value">'youtube.com'</span>
-                                    <span class="name">,</span>
-                                </a>
-                            </li>
-							<li>
-                                <a href="https://www.reddit.com" rel="noreferrer">
-                                    <span class="name">reddit:</span>
-                                    <span class="value">'reddit.com'</span>
-                                    <span class="name">,</span>
-                                </a>
-                            </li>
-							    <li>
-                                <a href="https://twitter.com" rel="noreferrer">
-                                    <span class="name">type:</span>
-                                    <span class="value">'twitter.com'</span>
-                                    <span class="name">,</span>
-                                </a>
-                            </li>
-                                <li>
-                                <a href="https://avistaz.to" rel="noreferrer">
-                                    <span class="name">avistaz:</span>
-                                    <span class="value">'avistaz.to'</span>
-                                    <span class="name">,</span>
-                                </a>
-                            </li>
-							<li>
-                                <a href="https://yts.mx" rel="noreferrer">
-                                    <span class="name">yts:</span>
-                                    <span class="value">'yts.mx'</span>
-                                    <span class="name">,</span>
-                                </a>
-                            </li>
-							<li>
-                                <a href="https://instagram.com" rel="noreferrer">
-                                    <span class="name">instagram:</span>
-                                    <span class="value">'instagram.com'</span>
-                                    <span class="name">,</span>
-                                </a>
-                            </li>
+  <!-- Font loading script -->
+  <script type="text/javascript">
+    // Load fonts and CSS based on configuration
+    function loadFonts() {
+      const head = document.getElementsByTagName('head')[0];
 
-							<li>
-                                <a href="https://torrentgalaxy.to/" rel="noreferrer">
-                                    <span class="name">torrentgalaxy:</span>
-                                    <span class="value">'torrentgalaxy.to'</span>
-                                    <span class="name">,</span>
-                                </a>
-                            </li>
-							<li>
-                                <a href="https://fitgirl-repacks.site/" rel="noreferrer">
-                                    <span class="name">fitgirl-repacks:</span>
-                                    <span class="value">'fitgirl-repacks.site'</span>
-                                    <span class="name">,</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://outlook.com" rel="noreferrer">
-                                    <span class="name">outlook:</span>
-                                    <span class="value">'outlook.com'</span>
-				    <span class="name">,</span>
-                                </a>
-                            </li>
-				<li>
-                                <a href="https://gaming.amazon.com/home" rel="noreferrer">
-                                    <span class="name">prime gaming:</span>
-                                    <span class="value">'gaming.amazon.com'</span>
-				    <span class="name">,</span>
-                                </a>
-                            </li>
-				<li>
-                                <a href="https://www.nexusmods.com/" rel="noreferrer">
-                                    <span class="name">nexusmods:</span>
-                                    <span class="value">'nexusmods.com'</span>
-                                </a>
-                            </li>
-                        </ul>
-                </li>
-                <li>
-                    <span class="name">}</span>
-                </li>
-            </ul>
-            <span class="name">
-                )}
-            </span>
-        </p>
+      if (CONFIG.localFonts) {
+        // Load local awoo CSS (without Google Fonts import)
+        const awooLink = document.createElement('link');
+        awooLink.rel = 'stylesheet';
+        awooLink.type = 'text/css';
+        awooLink.href = 'src/css/awoo-local.min.css';
+        head.appendChild(awooLink);
 
-        <p>
-            <form action="https://www.google.com/search" method="get">
-                <span class="prompt">
-                workhorse
-                </span>
-                ~/htdocs/startpage $ g 
-                <input type="search" placeholder="Enter keywords" name="q">
-            </form>
+        // Load local fonts
+        const localFontLinks = [
+          'src/fonts/roboto-local.css',
+          'src/fonts/nunito-local.css',
+          'src/fonts/raleway-local.css',
+          'src/fonts/material-icons-local.css'
+        ];
 
-        </p>
+        localFontLinks.forEach(href => {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = href;
+          head.appendChild(link);
+        });
+      } else {
+        // Load standard awoo CSS (with Google Fonts import)
+        const awooLink = document.createElement('link');
+        awooLink.rel = 'stylesheet';
+        awooLink.type = 'text/css';
+        awooLink.href = 'src/css/awoo.min.css';
+        head.appendChild(awooLink);
 
+        // Load Google Fonts
+        const googleFontLinks = [
+          'https://fonts.googleapis.com/css?family=Nunito:200|Roboto:100,400,700|Raleway:600',
+          'https://fonts.googleapis.com/icon?family=Material+Icons'
+        ];
 
+        googleFontLinks.forEach(href => {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = href;
+          head.appendChild(link);
+        });
+      }
+    }
 
-    </div>
+    // Load fonts after CONFIG is available
+    loadFonts();
+  </script>
 
+  <script type="text/javascript" src="src/components/tabs/tabs.component.js"></script>
+
+  <script type="text/javascript" src="src/components/weather/weather.api.js"></script>
+  <script type="text/javascript" src="src/components/weather/weather.component.js"></script>
+
+  <script type="text/javascript" src="src/components/clock/clock.component.js"></script>
+
+  <script type="text/javascript" src="src/components/statusbar/statusbar.component.js"></script>
+
+  <script type="text/javascript" src="src/components/search/search.component.js"></script>
+
+  <script type="text/javascript" src="src/common/module.js"></script>
 </body>
+
 </html>

@@ -33,7 +33,7 @@ const default_configuration = {
     },
   },
   keybindings: {
-    "s": "search-bar",
+    "d": "search-bar",
   },
   disabled: [],
   localIcons: true,
@@ -72,10 +72,16 @@ const default_configuration = {
           name: "workspace",
           links: [
             {
-              name: "gmail",
-              url: "https://mail.google.com",
-              icon: "brand-gmail",
-              icon_color: palette.green,
+              name: "onedrive",
+              url: "https://m365.cloud.microsoft/onedrive/?auth=2",
+              icon: "brand-onedrive",
+              icon_color: palette.sky,
+            },
+            {
+              name: "m365 apps",
+              url: "https://m365.cloud.microsoft/apps?auth=2&home=1",
+              icon: "brand-office",
+              icon_color: palette.sky,
             },
             {
               name: "outlook office",
@@ -84,10 +90,16 @@ const default_configuration = {
               icon_color: palette.sky,
             },
             {
-              name: "outlook",
-              url: "https://outlook.com",
-              icon: "mail",
-              icon_color: palette.blue,
+              name: "entra id",
+              url: "https://entra.microsoft.com",
+              icon: "id-badge-2",
+              icon_color: palette.sky,
+            },
+            {
+              name: "intune",
+              url: "https://intune.microsoft.com",
+              icon: "layers-intersect",
+              icon_color: palette.sky,
             },
             {
               name: "office",
@@ -95,11 +107,29 @@ const default_configuration = {
               icon: "brand-onedrive",
               icon_color: palette.blue,
             },
+            {
+              name: "powerautomate",
+              url: "https://make.powerautomate.com/",
+              icon: "settings-automation",
+              icon_color: palette.blue,
+            },
           ],
         },
         {
-          name: "media",
+          name: "personal",
           links: [
+            {
+              name: "gmail",
+              url: "https://gmail.com",
+              icon: "brand-gmail",
+              icon_color: palette.red,
+            },
+            {
+              name: "outlook",
+              url: "https://outlook.com",
+              icon: "mail",
+              icon_color: palette.blue,
+            },
             {
               name: "yt",
               url: "https://youtube.com",
@@ -281,6 +311,29 @@ const default_configuration = {
               url: "https://store.nintendo.co.uk",
               icon: "device-nintendo",
               icon_color: palette.blue,
+            },
+          ],
+        },
+                {
+          name: "Torrents",
+          links: [
+            {
+              name: "YTS",
+              url: "https://yts.mx",
+              icon: "skull",
+              icon_color: palette.green,
+            },
+            {
+              name: "1337x",
+              url: "https://1337x.to",
+              icon: "skull",
+              icon_color: palette.green,
+            },
+            {
+              name: "Avistaz",
+              url: "https://avistaz.to",
+              icon: "skull",
+              icon_color: palette.green,
             },
           ],
         },

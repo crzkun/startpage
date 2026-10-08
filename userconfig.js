@@ -136,6 +136,18 @@ const default_configuration = {
               icon: "brand-youtube",
               icon_color: palette.red,
             },
+            {
+              name: "netflix",
+              url: "https://netflix.com",
+              icon: "brand-netflix",
+              icon_color: palette.red,
+            },
+             {
+              name: "prime",
+              url: "https://primevideo.com",
+              icon: "brand-amazon",
+              icon_color: palette.blue,
+            },
             /* {
               name: "mil.in.ua",
               url: "https://mil.in.ua",
@@ -279,7 +291,7 @@ const default_configuration = {
 
             {
               name: "reddit",
-              url: "https://www.reddit.com/r/unixporn",
+              url: "https://www.reddit.com",
               icon: "brand-reddit",
               icon_color: palette.peach,
             },
